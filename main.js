@@ -171,6 +171,15 @@ const board = [
   ]
 ]
 
+const leftButton = document.getElementById('leftButton')
+const rightButton = document.getElementById('rightButton')
+const downButton = document.getElementById('downButton')
+
+// Asignar funciones a eventos táctiles
+leftButton.addEventListener('touchstart', movePieceLeft)
+rightButton.addEventListener('touchstart', movePieceRight)
+downButton.addEventListener('touchstart', movePieceDown)
+
 function createBoard (width, height) {
   return Array(height).fill().map(() => Array(width).fill(0))
 }
